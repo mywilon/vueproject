@@ -1,0 +1,726 @@
+/*用于继承*/
+.wd12,
+.cart-item .cart-item-head ul li:nth-child(2),
+.cart-item .cart-item-head ul li:nth-child(3),
+.cart-item .cart-item-head ul li:nth-child(4),
+.cart-item .cart-item-head ul li:nth-child(5) {
+  width: 12%;
+  padding: 0 10px;
+}
+/*先写基本的没有响应式的*/
+/*全局title开始*/
+.checkout-title {
+  position: relative;
+  text-align: center;
+  margin-bottom: 41px;
+}
+.checkout-title span {
+  font-size: 20px;
+  position: relative;
+  font-family: "moderat", sans-serif;
+  background: #fff;
+  padding: 0 2em;
+  color: #605F5F;
+  z-index: 1;
+  font-weight: bold;
+}
+.checkout-title:before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+  z-index: 0;
+}
+/*全局title结束*/
+/*订单列表开始*/
+.cart {
+  padding: 69px 0 54px 0;
+}
+.cart-item {
+  display: table;
+  width: 100%;
+}
+.cart-item .cart-item-head {
+  display: table-header-group;
+}
+.cart-item .cart-item-head ul {
+  display: table-row;
+  width: 100%;
+}
+.cart-item .cart-item-head ul li {
+  display: table-cell;
+  height: 54px;
+  line-height: 54px;
+  text-align: center;
+  background: #605F5F;
+  color: #fff;
+  font-size: 18px;
+}
+.cart-item .cart-item-list {
+  display: table-row-group;
+  width: 100%;
+  /*商品选择按钮*/
+  /*商品图片*/
+  /*商品名字*/
+  /*商品附加信息*/
+  /*商品是否有货*/
+}
+.cart-item .cart-item-list > li {
+  display: table-row;
+  position: relative;
+  padding: 36px 0;
+}
+.cart-item .cart-item-list > li > div {
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+  border-bottom: 1px solid #e9e9e9;
+}
+.cart-item .cart-item-list > li.disabled > div:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  background: rgba(95, 95, 95, 0.3);
+}
+.cart-item .cart-item-list .cart-tab-1 {
+  padding: 36px 0;
+  min-height: 72px;
+  border-left: 1px solid #e9e9e9;
+  text-align: left;
+}
+.cart-item .cart-item-list .cart-tab-2 {
+  padding-top: 64px;
+}
+.cart-item .cart-item-list .cart-tab-3 {
+  padding-top: 48px;
+}
+.cart-item .cart-item-list .cart-tab-4 {
+  padding-top: 64px;
+}
+.cart-item .cart-item-list .cart-tab-5 {
+  padding-top: 62px;
+  border-right: 1px solid #e9e9e9;
+}
+.cart-item .cart-item-list .cart-item-check {
+  float: left;
+  padding: 28px 0 28px 22px;
+}
+.cart-item .cart-item-list .cart-item-pic {
+  float: left;
+  width: 80px;
+  height: 72px;
+  margin-left: 22px;
+  border: 1px solid #e9e9e9;
+}
+.cart-item .cart-item-list .cart-item-pic img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.cart-item .cart-item-list .cart-item-title {
+  min-height: 58px;
+  padding: 0 20px 0 160px;
+}
+.cart-item .cart-item-list .cart-item-title .item-name {
+  margin: 2px 0 10px;
+  line-height: 16px;
+  color: #000;
+}
+.cart-item .cart-item-list .item-include {
+  position: relative;
+  padding-left: 160px;
+}
+.cart-item .cart-item-list .item-include dl {
+  padding-right: 60px;
+}
+.cart-item .cart-item-list .item-include dl dt {
+  float: left;
+  width: 65px;
+}
+.cart-item .cart-item-list .item-include dl dd {
+  margin-bottom: 13px;
+  padding-left: 65px;
+  color: #999;
+}
+.cart-item .cart-item-list .item-include dl:after {
+  visibility: hidden;
+  content: '';
+  display: block;
+  clear: both;
+}
+.cart-item .cart-item-list .item-stock {
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+}
+.cart-item .cart-item-list .item-stock-no {
+  color: #d1434a;
+}
+.cart-item .cart-item-list .quantity input {
+  padding: 0.5em 20px;
+  text-align: center;
+  border: 1px solid #bbb;
+}
+.cart-foot-wrap {
+  height: 54px;
+  line-height: 54px;
+  margin-top: 18px;
+}
+.cart-foot-wrap .cart-foot-l {
+  float: left;
+  font-size: 16px;
+  padding: 0 22px;
+}
+.cart-foot-wrap .item-all-check {
+  float: left;
+  color: #EE7A23;
+}
+.cart-foot-wrap .item-all-check span {
+  vertical-align: middle;
+}
+.cart-foot-wrap .item-all-check .item-check-btn {
+  margin-right: 18px;
+}
+.cart-foot-wrap .item-all-check .item-check-btn .icon {
+  vertical-align: top;
+}
+.cart-foot-wrap .item-all-del {
+  float: left;
+  margin-top: 2px;
+  margin-left: 10px;
+}
+.cart-foot-wrap .cart-foot-r {
+  float: right;
+}
+.cart-foot-wrap .item-total {
+  float: left;
+  margin-right: 31px;
+  color: #605F5F;
+  font-size: 18px;
+}
+.cart-foot-wrap .item-total .total-price {
+  margin-left: 16px;
+  color: #d1434a;
+  font-family: "moderat", sans-serif;
+}
+.cart-foot-wrap .next-btn-wrap {
+  float: right;
+}
+.cart-foot-wrap .next-btn-wrap .btn {
+  width: 200px;
+}
+.cart-foot-wrap:after {
+  visibility: hidden;
+  display: block;
+  content: " ";
+  clear: both;
+}
+/*勾选check-btn*/
+.item-check-btn {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.item-check-btn .icon-ok {
+  display: none;
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+  -webkit-transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+}
+.item-check-btn.check {
+  background: #EE7A23;
+  border-color: #EE7A23;
+}
+.item-check-btn.check .icon-ok {
+  display: inline-block;
+}
+/*删除按钮*/
+.item-edit-btn {
+  display: inline-block;
+  width: 16px;
+  height: 20px;
+}
+.item-edit-btn .icon-del {
+  width: 100%;
+  height: 100%;
+  fill: #999;
+}
+/*订单列表结束*/
+/*订单配送地址开始*/
+.check-step {
+  padding: 5px 0;
+}
+.check-step ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  display: box-flex;
+  margin: 25px 0 50px 0;
+}
+.check-step ul:after {
+  clear: both;
+  content: '';
+  visibility: hidden;
+  display: block;
+}
+.check-step ul li {
+  box-flex: 1;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex: 1;
+  position: relative;
+  float: left;
+  width: 25%;
+  line-height: 1.5em;
+  padding: 0 1em 1em 1em;
+  border-bottom: 2px solid #ccc;
+  color: #999;
+  font-size: 16px;
+  text-align: center;
+}
+.check-step ul li:after {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  left: 50%;
+  margin-left: -7px;
+  bottom: -7px;
+  background-color: #ccc;
+  content: '';
+  border-radius: 50%;
+}
+.check-step ul li.cur {
+  border-color: #EE7A23;
+  color: #EE7A23;
+}
+.check-step ul li.cur:after {
+  background-color: #EE7A23;
+}
+.addr-list-wrap {
+  min-height: 300px;
+  padding-bottom: 40px;
+}
+/*用于继承*/
+.wd20,
+.addr-list ul li .addr-edit,
+.addr-list ul li .addr-del {
+  display: none;
+  width: 20px;
+  height: 20px;
+}
+.b15-l20,
+.addr-list ul li .addr-set-default,
+.addr-list ul li .addr-default {
+  bottom: 15px;
+  left: 20px;
+  color: #EE7A23;
+}
+.addr-list ul:after {
+  clear: both;
+  visibility: hidden;
+  display: block;
+  content: '';
+}
+.addr-list ul li {
+  width: 23.5%;
+  float: left;
+  margin: 10px 2% 10px 0;
+  padding: 20px 20px 40px;
+  position: relative;
+  background: #fff;
+  border: 2px solid #e9e9e9;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 14px;
+}
+.addr-list ul li dt {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.addr-list ul li dd {
+  line-height: 20px;
+  margin-bottom: 4px;
+}
+.addr-list ul li .address {
+  height: 40px;
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.addr-list ul li .tel {
+  color: #605F5F;
+}
+.addr-list ul li .addr-operation {
+  position: absolute;
+}
+.addr-list ul li .addr-operation .icon {
+  width: 100%;
+  height: 100%;
+}
+.addr-list ul li .addr-operation:hover .icon {
+  fill: #EE7A23;
+}
+.addr-list ul li .addr-edit {
+  top: 20px;
+  right: 20px;
+}
+.addr-list ul li .addr-del {
+  bottom: 20px;
+  right: 20px;
+}
+.addr-list ul li .addr-set-default {
+  display: none;
+}
+.addr-list ul li .addr-set-default a {
+  color: #EE7A23;
+}
+.addr-list ul li:nth-child(4n) {
+  margin-right: 0;
+}
+.addr-list ul li:hover {
+  border-color: #EE7A23;
+}
+.addr-list ul li.addr-new {
+  color: #333;
+  text-align: center;
+}
+.addr-list ul li.addr-new .add-new-inner {
+  padding-top: 20px;
+}
+.addr-list ul li.addr-new .add-new-inner p {
+  margin-top: 10px;
+}
+.addr-list ul li.addr-new .add-new-inner .icon-add {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+}
+.addr-list ul li.addr-new .add-new-inner .icon-add .icon-add {
+  width: 50px;
+  height: 50px;
+  fill: #605F5F;
+}
+.addr-list ul li.check {
+  border-color: #EE7A23;
+  border-width: 2px;
+}
+.addr-list ul li.check .addr-operation {
+  display: block;
+}
+.shipping-addr-more {
+  margin-top: 10px;
+  text-align: center;
+}
+.up-down-btn {
+  color: #EE7A23;
+  font-size: 14px;
+}
+.up-down-btn:hover {
+  color: #EE7A23;
+}
+.up-down-btn:hover .i-up-down-l {
+  left: 0;
+  -webkit-transform: rotate(-40deg);
+  -moz-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+  transition: transform 0.3s ease-out;
+}
+.up-down-btn:hover .i-up-down-r {
+  right: 0;
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  transition: transform 0.3s ease-out;
+}
+.i-up-down {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 6px;
+  vertical-align: middle;
+  z-index: 2;
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  transform: translateY(2px);
+  transition: all 0.3s ease-out;
+}
+.i-up-down i {
+  position: absolute;
+  top: 0;
+  width: 8px;
+  height: 1px;
+  background: #EE7A23;
+}
+.i-up-down .i-up-down-l {
+  left: 0;
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  transform: rotate(40deg);
+  transition: transform 0.3s ease-out;
+}
+.i-up-down .i-up-down-r {
+  right: 0;
+  -webkit-transform: rotate(-40deg);
+  -moz-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+  transition: transform 0.3s ease-out;
+}
+.shipping-method-wrap {
+  padding-bottom: 65px;
+}
+.shipping-method {
+  text-align: center;
+}
+.shipping-method li {
+  display: inline-block;
+  width: 300px;
+  margin: 5px;
+  padding: 10px;
+  background: #fff;
+  border: 2px solid #e9e9e9;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #999;
+  font-family: "Moderat";
+  cursor: pointer;
+}
+.shipping-method li .price {
+  font-weight: bold;
+}
+.shipping-method li.check {
+  border-color: #EE7A23;
+  color: #333;
+}
+.shipping-method li:hover {
+  border-color: #EE7A23;
+}
+.checkout-addr .next-btn-wrap {
+  text-align: center;
+  padding: 62px 0;
+  border-top: 1px solid #e9e9e9;
+  z-index: 203;
+}
+/*订单配送地址结束*/
+/*响应式开始*/
+/*终端屏幕小于等于1280px布局*/
+@media only screen and (max-width: 1280px) {
+  .container {
+    width: 100%;
+  }
+}
+/*终端屏幕小于等于991px布局*/
+@media only screen and (max-width: 991px) {
+  .cart {
+    padding-top: 40px;
+  }
+  .cart-item {
+    display: block;
+    background: #f0f0f0;
+  }
+  .cart-item .cart-item-head {
+    display: none;
+  }
+  .cart-item .cart-item-list {
+    display: block;
+  }
+  .cart-item .cart-item-list > li {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    padding: 0;
+    background: #fff;
+    border-top: 1px solid #e9e9e9;
+    border-bottom: 1px solid #e9e9e9;
+  }
+  .cart-item .cart-item-list > li > div {
+    display: block;
+    position: static;
+    border: none;
+  }
+  .cart-item .cart-item-list > li .disabled > div:after {
+    display: none;
+  }
+  .cart-item .cart-item-list > li .disabled:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(96, 95, 95, 0.3);
+    z-index: 5;
+  }
+  .cart-item .cart-item-list .cart-tab-1 {
+    padding: 18px 0 0 0;
+    border: none;
+  }
+  .cart-item .cart-item-list .cart-tab-2 {
+    display: none;
+  }
+  .cart-item .cart-item-list .cart-tab-3 {
+    float: left;
+    width: 50%;
+    padding: 8px 0 8px 10px;
+    text-align: left;
+  }
+  .cart-item .cart-item-list .cart-tab-4 {
+    float: right;
+    width: 50%;
+    padding: 15px 10px 14px 0;
+    text-align: right;
+  }
+  .cart-item .cart-item-list .cart-tab-5 {
+    clear: both;
+    padding: 0;
+  }
+  .cart-item .cart-item-list .cart-item-check {
+    padding-left: 10px;
+  }
+  .cart-item .cart-item-list .cart-item-pic {
+    margin-left: 10px;
+  }
+  .cart-item .cart-item-list .cart-item-title {
+    height: 72px;
+    padding: 0 10px 0 126px;
+  }
+  .cart-item .cart-item-list .item-include {
+    clear: both;
+    margin-top: 10px;
+    padding: 0 10px 10px 36px;
+    border-bottom: 1px solid #e9e9e9;
+  }
+  .cart-item .cart-item-list .item-quantity > div {
+    display: inline-block;
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+  .cart-item .cart-item-list .item-stock {
+    margin-top: 0;
+  }
+  .cart-item .cart-item-list .cart-item-operation {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+  }
+  .cart-foot-wrap .cart-foot-l {
+    padding: 0 10px;
+  }
+  .addr-list {
+    padding: 0 10px;
+  }
+  .addr-list ul li {
+    width: 49%;
+    margin-right: 2%;
+  }
+  .addr-list ul li:nth-child(4n) {
+    margin-right: 2%;
+  }
+  .addr-list ul li:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+/*终端屏幕小于等于767px布局*/
+@media only screen and (max-width: 767px) {
+  .checkout {
+    background: #f0f0f0;
+  }
+  .cart {
+    padding-top: 13px;
+  }
+  .checkout-title {
+    margin: 0 10px 13px 10px;
+  }
+  .checkout-title span {
+    font-size: 14px;
+    background: #f0f0f0 !important;
+  }
+  .cart-foot-wrap {
+    height: 42px;
+    line-height: 42px;
+    margin: 0;
+  }
+  .cart-foot-wrap .cart-foot-l {
+    display: none;
+  }
+  .cart-foot-wrap .item-total {
+    float: none;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .cart-foot-wrap .next-btn-wrap {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 101;
+  }
+  .cart-foot-wrap .next-btn-wrap .btn {
+    display: block;
+    width: 100%;
+  }
+  .check-step ul {
+    margin: 10px 0 25px 0;
+  }
+  .check-step ul li {
+    font-size: 12px;
+  }
+  .addr-list {
+    padding: 0 10px;
+  }
+  .addr-list ul li {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .shipping-method {
+    padding: 10px;
+  }
+  .shipping-method li {
+    width: 100%;
+    margin: 5px 0;
+  }
+  .checkout-addr {
+    position: relative;
+  }
+  .checkout-addr .next-btn-wrap {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 0;
+    border: none;
+  }
+  .checkout-addr .next-btn-wrap .btn {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+}
+/*响应式结束*/
+
+/*# sourceMappingURL=maps/order.css.map */

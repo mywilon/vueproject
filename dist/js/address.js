@@ -1,0 +1,62 @@
+new Vue({
+	el:'.container',
+	data:{
+		addressList:[],
+		delFlag:false,
+		editFlag:false,
+		limitNum:3,
+		curIndex:0,
+		shipping:1,
+		curAddress:'',
+	},
+	computed:{
+		filterAddress:function(){
+			//用于限制地址显示数量，开始显示三个；
+			return this.addressList.slice(0,this.limitNum);
+		}
+	},
+	mounted:function(){
+		//此处代表页面加载后数据载入
+		this.$nextTick(function(){
+			this.getAddress();
+		})
+	},
+	methods:{
+		getAddress:function(){
+			this.$http.get('data/address.json').then(function(res){
+				var res=res.data;
+				if(res.status==0){
+					this.addressList=res.result;
+				}
+			});
+		},
+		loadMore:function(){
+			this.limitNum==this.addressList.length?this.limitNum=3:this.limitNum=this.addressList.length;
+		},
+		setDefault:function(addressId){
+			this.addressList.forEach(function(item,index){
+				if(item.addressId==addressId){
+					item.isDefault=true;
+				}else{
+					item.isDefault=false;
+				}
+			});
+		},
+		delConfirm:function(item){
+			this.curAddress=item;
+			this.editFlag=false;
+			this.delFlag=true;
+		},
+		editConfirm:function(item){
+			this.curAddress=item;
+			this.delFlag=false;
+			this.editFlag=true;
+		},
+		delSure:function(){
+			var index=this.addressList.indexOf(this.curAddress);
+			this.addressList.splice(index,1);
+			this.delFlag=false;
+		},
+
+	}
+});
