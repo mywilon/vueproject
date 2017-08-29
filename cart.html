@@ -49,9 +49,9 @@
 						<!-- table title -->
 							<div class="cart-item-head">
 								<ul>
-									<li>商品数量</li>
-									<li>商品金额</li>
-									<li>商品数量</li>
+									<li>宠物信息</li>
+									<li>宠物金额</li>
+									<li>宠物数量</li>
 									<li>总金额</li>
 									<li>编辑</li>
 								</ul>
@@ -88,7 +88,8 @@
 					                  <a href="javascript:void 0" @click="changeMoney(item,1)">+</a>
 					                </div>
 					            </div>
-					            <div class="item-stock">有货</div>
+					            <div class="item-stock" v-if="item.productQuantity<item.productAllQuantity">有货</div>
+					            <div class="item-stock item-stock-no" v-if="item.productQuantity>=item.productAllQuantity">库存不足</div>
 					          </div>	
 									</div>
 									<div class="cart-tab-4">

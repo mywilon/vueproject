@@ -1,52 +1,79 @@
 {
   "status":1,
   "result":{
-    "totalMoney":109,
+    "totalMoney":12200,
     "list":[
       {
         "productId":"600100002115",
-        "productName":"黄鹤楼香烟",
-        "productPrice":19,
+        "productName":"迷你狗狗",
+        "productPrice":1900,
         "productQuantity":1,
-        "productImage":"dist/imges/goods-1.jpg",
+        "productAllQuantity":3,
+        "productImage":"dist/imges/dog-1.jpg",
         "parts":[
           {
             "partsId":"10001",
-            "partsName":"打火机",
-            "imgSrc":"static/img/part-1.jpg"
+            "partsName":"狗狗项链"
           }
         ]
       },
       {
         "productId":"600100002120",
-        "productName":"加多宝",
-        "productPrice":8,
-        "productQuantity":5,
-        "productImage":"dist/imges/goods-2.jpg",
+        "productName":"狗狗2",
+        "productPrice":1300,
+        "productQuantity":1,
+        "productAllQuantity":5,
+        "productImage":"dist/imges/dog-2.jpg",
         "parts":[
           {
             "partsId":"20001",
-            "partsName":"吸管",
-            "imgSrc":"static/img/part-2.jpg"
+            "partsName":"洗澡"
           }
         ]
       },
       {
         "productId":"600100002117",
-        "productName":"金装黄鹤楼",
-        "productPrice":25,
+        "productName":"迷你狗狗",
+        "productPrice":2500,
         "productQuantity":2,
-        "productImage":"dist/imges/goods-1.jpg",
+        "productAllQuantity":5,
+        "productImage":"dist/imges/dog-3.jpg",
         "parts":[
           {
-            "partsId":"10001",
-            "partsName":"打火机-1",
-            "imgSrc":"static/img/part-1.jpg"
+            "partsId":"30001",
+            "partsName":"狗狗护理一套"
           },
           {
-            "partsId":"10002",
-            "partsName":"打火机-2",
-            "imgSrc":"static/img/part-1.jpg"
+            "partsId":"30002",
+            "partsName":"狗狗护理二套"
+          }
+        ]
+      },
+      {
+        "productId":"600100002118",
+        "productName":"迷你兔子",
+        "productPrice":2000,
+        "productQuantity":1,
+        "productAllQuantity":5,
+        "productImage":"dist/imges/rabbit.jpg",
+        "parts":[
+          {
+            "partsId":"40001",
+            "partsName":"兔笼"
+          }
+        ]
+      },
+      {
+        "productId":"600100002119",
+        "productName":"小猫",
+        "productPrice":2000,
+        "productQuantity":1,
+        "productAllQuantity":8,
+        "productImage":"dist/imges/cat.jpg",
+        "parts":[
+          {
+            "partsId":"50001",
+            "partsName":"猫粮"
           }
         ]
       }

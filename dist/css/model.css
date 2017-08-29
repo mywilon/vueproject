@@ -135,8 +135,8 @@
   font-family: "moderat", sans-serif;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
-  border: 1px solid #d1434a;
-  color: #d1434a;
+  border: 1px solid #EE7A23;
+  color: #EE7A23;
   text-transform: uppercase;
   letter-spacing: .25em;
   white-space: nowrap;
@@ -159,20 +159,20 @@ button {
   line-height: 45px;
 }
 .btn--red {
-  background-color: #d1434a;
-  border-color: #d1434a;
+  background-color: #EE7A23;
+  border-color: #EE7A23;
   color: #fff;
 }
 .btn:hover,
 .btn[href]:hover {
-  background-color: #d1434a;
+  background-color: #EE7A23;
   color: #fff;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 .btn--red:hover {
   background-color: #fff;
-  color: #d1434a;
+  color: #EE7A23;
 }
 button {
   background: 0;

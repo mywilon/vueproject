@@ -36,9 +36,13 @@ var vm=new Vue({
 		changeMoney:function(product,type){
 			if(type){
 				product.productQuantity++;
+				if(product.productQuantity>product.productAllQuantity){
+					product.productQuantity=product.productAllQuantity
+				}
 			}else if(product.productQuantity>1){
-				product.productQuantity++;
+				product.productQuantity--;
 			}
+			
 		},
 		selectedPro:function(product){
 			if(!product.checked){

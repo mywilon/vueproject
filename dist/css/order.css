@@ -55,7 +55,7 @@
   height: 54px;
   line-height: 54px;
   text-align: center;
-  background: #605F5F;
+  background: #EE7A23;
   color: #fff;
   font-size: 18px;
 }
@@ -162,7 +162,7 @@
   color: #999;
 }
 .cart-item .cart-item-list .item-stock-no {
-  color: #d1434a;
+  color: #EE7A23;
 }
 .cart-item .cart-item-list .quantity input {
   padding: 0.5em 20px;
