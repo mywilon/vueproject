@@ -1,6 +1,11 @@
 new Vue({
 	el:'.container',
 	data:{
+		newAddress:{
+			userName:"",
+			streetName:"",
+			tel:""
+		},
 		addressList:[],
 		delFlag:false,
 		editFlag:false,
@@ -48,6 +53,11 @@ new Vue({
 			this.delFlag=true;
 		},
 		editConfirm:function(item){
+			this.newAddress={
+				userName:item.userName,
+				streetName:item.streetName,
+				tel:item.tel
+			}
 			this.curAddress=item;
 			this.delFlag=false;
 			this.editFlag=true;
@@ -57,6 +67,25 @@ new Vue({
 			this.addressList.splice(index,1);
 			this.delFlag=false;
 		},
-
+		creatAddress:function(){
+			this.newAddress = {userName: '', streetName: '', tel: ''}
+			this.delFlag=false;
+			this.editFlag=true;
+			this.curAddress="";
+		},
+		submitAddress:function(item){
+			if(item){
+				if(item==this.curAddress){
+					item.userName=this.newAddress.userName;
+					item.streetName=this.newAddress.streetName;
+					item.tel=this.newAddress.tel;
+				}
+			}else{
+				this.addressList.unshift(this.newAddress);
+            	this.newAddress = {userName: '', streetName: '', tel: ''}
+			}
+            // 添加完newAddress对象后，重置newAddress对象
+            this.editFlag=false;
+		}
 	}
 });

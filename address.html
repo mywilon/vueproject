@@ -79,7 +79,7 @@
 			                <div class="addr-operation addr-default" v-if="item.isDefault">默认地址</div>
 			              </li>
 
-			              <li class="addr-new" @click="editFlag=true">
+			              <li class="addr-new" @click="creatAddress">
 			                <div class="add-new-inner">
 			                  <i class="icon-add">
 			                    <svg class="icon icon-add"><use xlink:href="#icon-add"></use></svg>
@@ -147,12 +147,12 @@
 		            <div class="md-content">
 		              <div class="confirm-tips">
 		                <div class="md-form-item">
-		                  <label class="md-form-item__label" style="width: 80px;">
+		                  <label class="md-form-item__label" style="width: 80px;" >
 		                    姓名
 		                  </label>
 		                  <div class="md-form-item__content" style="margin-left: 80px;">
 		                    <div  class="el-input">
-		                      <input type="text" autocomplete="off" class="md-input__inner">
+		                      <input type="text" autocomplete="off" class="md-input__inner" v-model="newAddress.userName">
 		                    </div>
 		                  </div>
 		                </div>
@@ -162,7 +162,7 @@
 		                  </label>
 		                  <div class="md-form-item__content" style="margin-left: 80px;">
 		                    <div  class="el-input">
-		                      <input type="text" autocomplete="off" class="md-input__inner">
+		                      <input type="text" autocomplete="off" class="md-input__inner" v-model="newAddress.streetName">
 		                    </div>
 		                  </div>
 		                </div>
@@ -172,13 +172,13 @@
 		                  </label>
 		                  <div class="md-form-item__content" style="margin-left: 80px;">
 		                    <div  class="el-input">
-		                      <input type="text" autocomplete="off" class="md-input__inner">
+		                      <input type="text" autocomplete="off" class="md-input__inner" v-model="newAddress.tel">
 		                    </div>
 		                  </div>
 		                </div>
 		              </div>
 		              <div class="btn-wrap col-2">
-		                <button class="btn btn--s" id="btnModalConfirms" @click="editFlag=false">保存</button>
+		                <button class="btn btn--s" id="btnModalConfirms" @click="submitAddress(curAddress)">保存</button>
 		                <button class="btn btn--s btn--red" id="btnModalCancels" @click="editFlag=false">取消</button>
 		              </div>
 		            </div>

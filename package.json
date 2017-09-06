@@ -1,26 +1,26 @@
 {
-  "name": "test",
+  "name": "my-vue-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "test.js",
+  "description": "this is vue project",
+  "main": "gulpfile.js",
   "dependencies": {
-    "vue":"^1.0.0",
-    "vue-router": "^2.3.0",
-    "vue-validator": "^2.0.0",
+    "gulp": "^3.9.1"
   },
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-clean-css": "^2.0.12",
-    "gulp-less": "^3.1.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^2.0.0",
-    "node-static": "^0.7.8",
-    "static-server": "^2.0.3",
-  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mywilon/vueproject.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "2801332892@qq.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mywilon/vueproject/issues"
+  },
+  "homepage": "https://github.com/mywilon/vueproject#readme"
 }
